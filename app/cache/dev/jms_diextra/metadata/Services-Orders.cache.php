@@ -1,0 +1,1 @@
+<?php return unserialize('C:40:"JMS\\DiExtraBundle\\Metadata\\ClassMetadata":257:{a:12:{i:0;s:6:"orders";i:1;N;i:2;N;i:3;N;i:4;N;i:5;a:0:{}i:6;N;i:7;a:0:{}i:8;a:0:{}i:9;a:0:{}i:10;N;i:11;s:142:"a:5:{i:0;s:15:"Services\\Orders";i:1;a:0:{}i:2;a:0:{}i:3;a:1:{i:0;s:50:"/mnt/hgfs/websites/sfember/src/Services/Orders.php";}i:4;i:1419828542;}";}}');
