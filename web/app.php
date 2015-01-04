@@ -1,5 +1,7 @@
 <?php
 
+use Qandidate\Stack\RequestId;
+use Qandidate\Stack\UuidRequestIdGenerator;
 use Symfony\Component\ClassLoader\ApcClassLoader;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -19,12 +21,17 @@ require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 
 $kernel = new AppKernel('prod', false);
+
+//Add unique Id to Request stack
+$generator = new UuidRequestIdGenerator(1337);
+$stack = new RequestId($kernel, $generator);
+
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 
 // When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
 //Request::enableHttpMethodParameterOverride();
 $request = Request::createFromGlobals();
-$response = $kernel->handle($request);
+$response = $stack->handle($request); //$kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);

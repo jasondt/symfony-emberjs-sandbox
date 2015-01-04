@@ -3,5 +3,5 @@ app:
     type:     annotation
     
 orders:
-    resource: Services\Orders
+    resource: Modules\Order\Service\OrderService
     type:     annotation

@@ -22,9 +22,14 @@ $loader = require_once __DIR__.'/../app/autoload.php';
 require_once __DIR__ . '/../app/AppKernel.php';
 
 $kernel = new AppKernel('dev', true);
+
+//Add unique Id to Request stack
+$generator = new UuidRequestIdGenerator(1337);
+$stack = new RequestId($kernel, $generator);
+
 //$kernel->loadClassCache();
 $request = Request::createFromGlobals();
-$response = $kernel->handle($request);
+$response = $stack->handle($request); //$kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
 

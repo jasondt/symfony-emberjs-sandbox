@@ -13,3 +13,5 @@
 !bin/symfony_requirements
 /composer.phar
 nbproject
+bower_components/
+node_modules/

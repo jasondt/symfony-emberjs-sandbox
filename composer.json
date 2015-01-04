@@ -21,10 +21,22 @@
         "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "odesk/phystrix": "~1.0",
+        "odesk/phystrix-dashboard": "~1.0",
+        "qandidate/symfony-json-request-transformer": "~1.0",
+        "qandidate/toggle-bundle": "~0.1",
+        "qandidate/stack-request-id": "~0.1",
+        "clue/buzz-react": "~0.2.0",
+        "friendsofsymfony/user-bundle": "~1.3",
+        "broadway/broadway": "0.3.0",
+        "graylog2/gelf-php": "~1.1",
+        "beberlei/assert": "~2.3"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "sensio/generator-bundle": "~2.3",
+        "phpunit/phpunit": "~4.4",
+        "liip/functional-test-bundle": "~1.0"
     },
     "scripts": {
         "post-root-package-install": [
